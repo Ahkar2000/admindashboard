@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor//fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="main container-fluid">
+        <div class="row">
+            <!-- side bar start -->
+            <div class="col-12 col-lg-3 col-xl-2 vh-100 sidebar">
+               <div class="d-flex justify-content-between align-items-center py-2 mt-3">
+                   <div class="d-flex align-items-center">
+                       <span class="bg-primary p-2 d-flex me-2 justify-content-center align-items-center rounded">
+                           <i class=" feather-shopping-bag text-white h4 mb-0"></i>
+                        </span>
+                       <span class="fw-bolder h4 mb-0 text-uppercase text-primary"> My Shop</span>
+                   </div>
+                   <button class="hide-sidebar-btn btn-light border-0 d-block d-lg-none ">
+                        <i class="feather-x text-primary"  style="font-size: 2em;"></i>
+                    </button>
+               </div>
+               <div class="nav-menu">
+                <ul>
+                    <li class="menu-spacer"></li>
+                    <li class="menu-item">
+                        <a href="dashboard.html" class="menu-item-link">
+                           <span>
+                                <i class="feather-home"></i>
+                                Dashboard
+                           </span>
+                        </a>
+                    </li>
+                    <li class="menu-spacer"></li>
+                    <li class="menu-title">
+                        Manage Item
+                    </li>
+                    <li class="menu-item">
+                        <a href="item_add.html" class="menu-item-link active">
+                            <span>
+                                 <i class="feather-plus-circle"></i>
+                                Add Item
+                            </span>
+                         </a>
+                    </li>
+                    
+                    <li class="menu-item">
+                        <a href="item_list.html" class="menu-item-link">
+                           <span>
+                                <i class="feather-list"></i>
+                                Item List
+                           </span>
+                           <span class="badge rounded-pill text-bg-light d-flex align-items-center">
+                               <span>15</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="menu-spacer"></li>
+                </ul>
+           </div>
+            </div>
+            <!-- side bar end -->
+            <div class="col-12 col-lg-9 col-xl-10 vh-100 pb-3 pt-0 content">
+                <div class="row header mb-3 position-sticky top-0 mt-3">
+                    <div class="col-12">
+                        <div class="p-2 bg-primary rounded d-flex justify-content-between align-items-center">
+                            <button class="show-sidebar-btn btn btn-primary d-block d-lg-none">
+                                <i class="feather-menu text-light"  style="font-size: 2em;"></i>
+                            </button>
+                            <form action="" method="post" class="d-none d-md-block">
+                               <div class="form">
+                                    <input type="text" class=" form-control w-75 d-inline">
+                                    <button class="btn btn-light d-inline">
+                                        <i class="feather-search text-primary"></i>
+                                    </button>
+                               </div>
+                            </form>
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="./me.jpg" class="userImg shadow-sm" alt="">
+                                  Ahkar Min Htut
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">Action</a></li>
+                                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#">Log out</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content area start -->
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb mb-4">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                              <li class="breadcrumb-item"><a href="item_list.html">Item</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Add Item</li>
+                            </ol>
+                          </nav>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card mb-4 col-xl-8">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h4 class="mb-0 text-primary">
+                                        <i class=" feather-plus-circle me-1"></i>Add Item
+                                    </h4>
+                                    <a href="item_list.html" class="btn btn-outline-primary">
+                                        <i class=" feather-list"></i>
+                                    </a>
+                                </div>
+                                <hr>
+                               <form action="" method="post">
+                                   <div class="row">
+                                       <div class="col-12 col-md-6">
+                                           <div class="form-group">
+                                                <label for="photo">
+                                                    Photo Upload
+                                                </label>
+                                                <i class=" feather-info ipop" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Only Support jpg/png"></i>
+                                                <input type="file" name="photo" id="photo" class=" form-control mt-2" required>
+                                           </div>
+                                           <div class="form-group">
+                                               <label for="name" class="my-2">Item Name</label>
+                                               <input type="text" name="name" id="name" class="form-control">
+                                           </div>
+                                           <div class="form-group">
+                                               <label for="type" class="my-2">Type</label>
+                                               <select name="type" class="form-select" id="type">
+                                                <option value="" selected disabled>Select Type</option>
+                                                    <option value="0">ကုန်စို</option>
+                                                    <option value="1">ကုန်ခြောက်</option>
+                                               </select>
+                                           </div>
+                                            <div class="form-group">
+                                                <label for="c" class="my-2">Category</label>
+                                                <select name="c" class="form-select" id="c">
+                                                    <option value="" selected disabled>Select Main Category</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sub" class="my-2">Sub Category</label>
+                                                <select name="sub" class="form-select" id="sub">
+                                                    <option value="" selected disabled>Select Category</option>
+                                                </select>
+                                            </div>
+                                       </div>
+
+                                       <div class="col-12 col-md-6">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <label for="q" class="mb-2">Item Quantity</label>
+                                                    <input type="number" name="q" id="q" class="form-control">
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="unit" class="mb-2">Unit</label>
+                                                        <select name="unit" class="form-select" id="unit">
+                                                            <option value="" selected disabled>Select Unit</option>
+                                                             <option value="0">1</option>
+                                                             <option value="1">2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="price" class="my-2">Price</label>
+                                                <input type="number" name="price" id="price" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="des" class="my-2">Description</label>
+                                                <textarea type="text" name="des" id="des" rows="8" class="form-control"></textarea>
+                                            </div>
+                                       </div>
+                                   </div>
+                                   <hr>
+                                   <button class="btn btn-primary">Add Item</button>
+                               </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content area end -->
+            </div>
+           
+           
+           
+        </div>
+    </section>
+
+
+<script src="vendor/jquery.js"></script>
+<script src="vendor/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="js/app.js"></script>
+<script>
+    let category = ["Phone","Computer","TV"];
+    let subCategory = [
+        {name:'iPhone',category_id:0},
+        {name:'Mi',category_id:0},
+        {name:'hp',category_id:1},
+        {name:'Acer',category_id:1},
+        {name:'LG',category_id:2},
+        {name:'Samsung',category_id:2},
+    ];
+    category.map(function(el,index) {
+        $('#c').append(`<option value="${index}">${el}</option>`);
+    });
+    subCategory.map(function(el,index){
+        $('#sub').append(`<option value="${index}" data-category="${el.category_id}">${el.name}</option>`);
+    });
+    $('#c').on('change',function(){
+        let currentCategoryId = ($(this).val());
+        $('#sub option').hide();
+        $(`[data-category=${currentCategoryId}]`).show();
+    });
+</script>
+</body>
+</html>
