@@ -1,4 +1,4 @@
 # Technology Used
-HTML,CSS, Bootstrap, jQuery
+HTML,CSS, Bootstrap,jQuery,JavaScript 
 
 Just an Admin Dashboard UI project 
